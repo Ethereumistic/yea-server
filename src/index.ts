@@ -36,7 +36,7 @@ const rooms = new Map<string, { users: [string, string] }>();
 const httpServer = createServer();
 const io = new Server(httpServer, {
   cors: {
-    origin: clientURL,
+    origin: "*",
     methods: ["GET", "POST"]
   }
 });
